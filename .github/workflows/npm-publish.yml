@@ -24,13 +24,13 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           always-auth: 'true'
           cache: 'yarn'
+          scope: 'slallemand'
 
       - run: yarn install
       - run: yarn export-dynamic
-      - run: yarn publish --access public --verbose
+      - run: yarn publish --access public --verbose https://npm.pkg.github.com/slallemand
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
   # publish-npm:
