@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 18
       - run: npm install yarn
-      - run: yarn install
+#      - run: yarn install
       - run: yarn export-dynamic
 
 #  publish-npm:
