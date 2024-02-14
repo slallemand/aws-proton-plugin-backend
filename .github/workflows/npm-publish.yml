@@ -22,7 +22,6 @@ jobs:
         with:
           node-version: 18
           registry-url: 'https://npm.pkg.github.com'
-      - run: cat .npmrc
       - run: yarn install
       - run: yarn export-dynamic
       - run: yarn publish
