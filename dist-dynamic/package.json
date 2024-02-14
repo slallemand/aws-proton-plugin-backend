@@ -1,0 +1,68 @@
+{
+  "name": "aws-proton-backend-plugin-for-backstage-dynamic",
+  "description": "AWS Proton Backend Plugin for Backstage",
+  "version": "0.2.2",
+  "main": "dist/index.cjs.js",
+  "types": "dist/index.d.ts",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Amazon Web Services",
+    "url": "http://aws.amazon.com"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.cjs.js",
+    "types": "dist/index.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:awslabs/aws-proton-plugins-for-backstage",
+    "directory": "plugins/aws-proton-backend"
+  },
+  "bugs": {
+    "url": "https://github.com/awslabs/aws-proton-plugins-for-backstage/issues"
+  },
+  "backstage": {
+    "role": "backend-plugin"
+  },
+  "scripts": {
+    "start": "backstage-cli package start",
+    "build": "backstage-cli package build",
+    "lint": "backstage-cli package lint",
+    "test": "backstage-cli package test --watch false",
+    "prepack": "backstage-cli package prepack",
+    "postpack": "backstage-cli package postpack",
+    "clean": "backstage-cli package clean",
+    "export-dynamic": "janus-cli package export-dynamic-plugin --embed-package @aws/aws-proton-backend-plugin-for-backstage --override-interop default"
+  },
+  "dependencies": {
+    "@aws-sdk/client-proton": "^3.370.0",
+    "@aws-sdk/util-arn-parser": "^3.310.0",
+    "@types/express": "*",
+    "express": "^4.17.1",
+    "express-promise-router": "^4.1.0",
+    "fs-extra": "^11.1.0",
+    "winston": "^3.7.1",
+    "yn": "^4.0.0"
+  },
+  "devDependencies": {},
+  "files": [
+    "dist"
+  ],
+  "bundleDependencies": true,
+  "peerDependencies": {
+    "@backstage/backend-common": "^0.19.0",
+    "@backstage/backend-dynamic-feature-service": "0.1.0",
+    "@backstage/config": "^1.0.8",
+    "@backstage/integration-aws-node": "^0.1.4",
+    "@backstage/plugin-scaffolder-backend": "^1.15.0"
+  },
+  "overrides": {
+    "@aws-sdk/util-utf8-browser": {
+      "@smithy/util-utf8": "^2.0.0"
+    }
+  },
+  "resolutions": {
+    "@aws-sdk/util-utf8-browser": "npm:@smithy/util-utf8@~2"
+  }
+}
