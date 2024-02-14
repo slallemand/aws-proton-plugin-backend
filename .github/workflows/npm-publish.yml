@@ -27,8 +27,7 @@ jobs:
 
       - run: yarn install
       - run: yarn export-dynamic
-      - run: yarn pack
-      - run: yarn publish --access public --verbose https://npm.pkg.github.com/slallemand
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
