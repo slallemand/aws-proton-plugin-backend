@@ -9,19 +9,6 @@
     "name": "Amazon Web Services",
     "url": "http://aws.amazon.com"
   },
-  "publishConfig": {
-    "access": "public",
-    "main": "dist/index.cjs.js",
-    "types": "dist/index.d.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "github:awslabs/aws-proton-plugins-for-backstage",
-    "directory": "plugins/aws-proton-backend"
-  },
-  "bugs": {
-    "url": "https://github.com/awslabs/aws-proton-plugins-for-backstage/issues"
-  },
   "backstage": {
     "role": "backend-plugin"
   },
