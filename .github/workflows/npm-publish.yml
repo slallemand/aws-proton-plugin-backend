@@ -25,8 +25,7 @@ jobs:
           always-auth: 'true'
       - run: yarn install
       - run: yarn export-dynamic
-      - run: cat /home/runner/work/_temp/.npmrc
-      - run: yarn publish --registry https://npm.pkg.github.com --access public
+      - run: yarn publish --registry https://npm.pkg.github.com --access public --verbose
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
