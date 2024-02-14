@@ -27,7 +27,7 @@ jobs:
       - run: cat /home/runner/work/_temp/.npmrc
       - run: yarn install
       - run: yarn export-dynamic
-      - run: npm publish --access public
+      - run: cat /home/runner/work/_temp/.npmrc ; npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
