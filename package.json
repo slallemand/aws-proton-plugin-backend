@@ -1,5 +1,5 @@
 {
-  "name": "aws-proton-backend-plugin-for-backstage",
+  "name": "@slallemand/aws-proton-plugin-backend",
   "description": "AWS Proton Backend Plugin for Backstage",
   "version": "0.2.2",
   "main": "src/index.ts",

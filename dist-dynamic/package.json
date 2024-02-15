@@ -1,26 +1,13 @@
 {
-  "name": "aws-proton-backend-plugin-for-backstage-dynamic",
+  "name": "@slallemand/aws-proton-plugin-backend-dynamic",
   "description": "AWS Proton Backend Plugin for Backstage",
   "version": "0.2.2",
-  "main": "dist/index.cjs.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.cjs.js",
+  "types": "src/index.ts",
   "license": "Apache-2.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "http://aws.amazon.com"
-  },
-  "publishConfig": {
-    "access": "public",
-    "main": "dist/index.cjs.js",
-    "types": "dist/index.d.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "github:awslabs/aws-proton-plugins-for-backstage",
-    "directory": "plugins/aws-proton-backend"
-  },
-  "bugs": {
-    "url": "https://github.com/awslabs/aws-proton-plugins-for-backstage/issues"
   },
   "backstage": {
     "role": "backend-plugin"
