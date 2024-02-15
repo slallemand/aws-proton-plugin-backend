@@ -25,9 +25,9 @@ jobs:
           always-auth: 'true'
           scope: 'slallemand'
       - run: cat /home/runner/work/_temp/.npmrc
-      - run: npm install
-      - run: npm run export-dynamic
-      - run: cat /home/runner/work/_temp/.npmrc ; npm publish --access public
+      - run: yarn install
+      - run: yarn export-dynamic
+      - run: cat /home/runner/work/_temp/.npmrc ; yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
